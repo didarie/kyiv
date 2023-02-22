@@ -10,7 +10,8 @@ html {
     text-align: center;
 }
 
-ul, li {
+ul,
+li {
     list-style: none;
 }
 
@@ -18,7 +19,7 @@ a {
     text-decoration: none;
 }
 
-section{
+section {
     margin: 1rem 1.5rem;
     border: 1px solid black;
 }
@@ -29,9 +30,9 @@ section{
 
 }
 
-/* Header */ 
+/* Header */
 
-header{
+header {
     width: 100%;
     border-bottom: 1px solid #0D0807;
 }
@@ -42,50 +43,58 @@ header .nav {
     justify-content: space-between;
 }
 
-header .nav li:hover{
+header .nav li:hover {
     text-decoration: underline;
 }
-header .logo img{
+
+header .logo img {
     width: 2.5rem;
 }
 
-header a{
+header a {
     color: #0D0807;
 }
 
 /* Color */
 
-.colors h1{
+.colors h1 {
     padding-bottom: 0.5rem;
 }
 
-.colors h3{
+.colors h3 {
     padding: 1rem;
     font-weight: lighter;
 }
 
-.colors p{
+.colors p {
     color: white;
 }
 
-.color{
+.color {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 1rem;
 }
 
-.cell{
+@media only screen and (max-width: 700px){
+    .color{
+        grid-template-columns: none;
+    }
+}
+
+.cell {
     height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    border-radius: 5px;
 }
 
-.cell .after{
+.cell .after {
     display: none;
 }
 
-a:hover .after{
+a:hover .after {
     display: block;
     padding: .5rem;
 }
@@ -130,21 +139,31 @@ a:hover .after{
     background-color: #0D0807;
 }
 
-@media only screen and (max-width: 700px){
-    .color{
-        display: flex;
-        flex-direction: column;
-    }
-    .color a{
-        padding-bottom: 1rem;
-    }
-
-    .colors h1{
-        margin-top: 1rem;
-    }
-}
 
 /* Fonts */
+.number{
+    border: 1px dashed black;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px;
+}
 
+.font1 {
+    font-family: 'Cormorant Garamond', serif;
+}
 
+.font2 {
+    font-family: 'Gotu', sans-serif;
+}
 
+.font3 {
+    font-family: 'Epilogue', sans-serif;
+}
+
+.font4 {
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+.font5 {
+    font-family: 'Dela Gothic One', cursive;
+}
